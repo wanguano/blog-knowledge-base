@@ -1,0 +1,14 @@
+:root {
+  --vp-c-brand: #3eaf7c;
+  --vp-c-brand-light: #4abf8a;
+  --vp-c-brand-lighter: #57ce99;
+  --vp-c-brand-lightest: #64ddab;
+  --vp-c-brand-dark: #369a6d;
+  --vp-c-brand-darker: #2e855f;
+  --vp-c-brand-dimm: rgba(62, 175, 124, 0.08);
+}
+
+/* 自定义卡片样式等可以放在这里 */
+.custom-block.tip {
+  border-color: var(--vp-c-brand);
+}
