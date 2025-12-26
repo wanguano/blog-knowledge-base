@@ -7,12 +7,21 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '技术难点', link: '/posts/技术难点/' },
-      { text: '踩坑记录', link: '/posts/踩坑记录/' },
-      { text: 'Hooks', link: '/hooks/react/' }
+      { text: '指南', link: '/guide/contribution' },
+      { text: '技术难点', link: '/posts/技术难点/vite-hmr-failed' },
+      { text: '踩坑记录', link: '/posts/踩坑记录/react-hydration-error' },
+      { text: 'Hooks', link: '/hooks/react/use-local-storage' }
     ],
     
     sidebar: {
+      '/guide/': [
+        {
+          text: '开始使用',
+          items: [
+            { text: '贡献指南', link: '/guide/contribution' }
+          ]
+        }
+      ],
       '/posts/': [
         {
           text: '技术难点',
@@ -48,9 +57,18 @@ export default defineConfig({
       ],
       '/components/': [
         {
-          text: '通用组件',
+          text: '基础组件',
+          collapsed: false,
           items: [
+            { text: 'Button 按钮 (在线预览)', link: '/components/button' },
             { text: 'StatusBadge 状态徽章', link: '/components/status-badge' }
+          ]
+        },
+        {
+          text: '导航组件',
+          collapsed: false,
+          items: [
+            { text: 'NavMenu 导航菜单', link: '/components/nav-menu' }
           ]
         }
       ]

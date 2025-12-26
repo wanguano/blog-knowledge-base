@@ -10,8 +10,11 @@ hero:
       text: 开始阅读
       link: /posts/技术难点/vite-hmr-failed
     - theme: alt
+      text: 贡献指南
+      link: /guide/contribution
+    - theme: alt
       text: 查看组件
-      link: /components/status-badge
+      link: /components/button
 
 features:
   - title: 技术难点
