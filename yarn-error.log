@@ -1,0 +1,46 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\monesy\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add element-plus @element-plus/icons-vue
+
+PATH: 
+  C:\Program Files\PowerShell\7-preview;C:\Python312\Scripts;C:\Python312;C:\Python27\;C:\Python27\Scripts;c:\Users\monesy\AppData\Local\Programs\cursor\resources\app\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\Bandzpi\Bandizip;C:\ProgramData\chocolatey\bin;C:\Users\monesy\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;D:\XShell\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Pandoc\;C:\Users\monesy\AppData\Local\oh-my-posh;D:\Tencent\微信web开发者工具\dll;D:\phpstudy_pro\Extensions\composer1.8.5;D:\phpstudy_pro\Extensions\php\php8.0.2nts;C:\Program Files\TortoiseGit\bin;D:\Xftp8\;C:\Users\monesy\.console-ninja\.bin;C:\Users\monesy\AppData\Local\Microsoft\WindowsApps;C:\Users\monesy\AppData\Roaming\npm;C:\Users\monesy\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\monesy\.fly\bin;C:\Users\mo;c:\Users\monesy\AppData\Local\Programs\cursor\resources\app\bin;F:\Microsoft VS Code\bin;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Program Files\Java\jdk1.8.0_202\jre\bin;D:\Gradle\gradle-5.1.1\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\PowerShell\7-preview\preview;C:\Users\monesy\.local\bin;C:\Program Files\TortoiseSVN\bin;C:\Users\monesy\scoop\shims;C:\Users\monesy\.local\bin;C:\Users\monesy\AppData\Local\pnpm;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python312\Scripts;C:\Python312;C:\Python27\;C:\Python27\Scripts;c:\Users\monesy\AppData\Local\Programs\cursor\resources\app\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\Bandzpi\Bandizip;C:\ProgramData\chocolatey\bin;C:\Users\monesy\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;D:\XShell\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Pandoc\;C:\Users\monesy\AppData\Local\oh-my-posh;D:\Tencent\???web?????????\dll;D:\phpstudy_pro\Extensions\composer1.8.5;D:\phpstudy_pro\Extensions\php\php8.0.2nts;C:\Program Files\TortoiseSVN\bin;C:\Program Files\TortoiseGit\bin;D:\Xftp8\;C:\Users\monesy\.console-ninja\.bin;C:\User;D:\cursor\resources\app\bin;d:\Antigravity\bin;C:\Users\monesy\.console-ninja\.bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.9.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\monesy\AppData\Local\Yarn\Cache\v6\npm-csstype-3.2.3-ec48c0f3e993e50648c86da559e2610995cf989a-integrity\node_modules\csstype\index.d.ts' -> 'G:\Code\01 FrondEnd\04_WEB_Learn_Code\Project\dev-knowledge-base\node_modules\vitepress\node_modules\csstype\index.d.ts'
+
+npm manifest: 
+  {
+    "name": "vitepress-project",
+    "private": true,
+    "type": "module",
+    "scripts": {
+      "dev": "vitepress dev docs",
+      "build": "vitepress build docs",
+      "serve": "vitepress serve docs"
+    },
+    "devDependencies": {
+      "vue": "3.2.44",
+      "vitepress": "1.0.0-alpha.28"
+    },
+    "pnpm": {
+      "peerDependencyRules": {
+        "ignoreMissing": [
+          "@algolia/client-search"
+        ]
+      }
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

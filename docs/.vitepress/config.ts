@@ -10,7 +10,8 @@ export default defineConfig({
       { text: '指南', link: '/guide/contribution' },
       { text: '技术难点', link: '/posts/技术难点/vite-hmr-failed' },
       { text: '踩坑记录', link: '/posts/踩坑记录/react-hydration-error' },
-      { text: 'Hooks', link: '/hooks/react/use-local-storage' }
+      { text: '组件', link: '/components/button' },
+      { text: 'Hooks', link: '/hooks/vue/use-toggle' }
     ],
     
     sidebar: {
@@ -45,14 +46,18 @@ export default defineConfig({
       ],
       '/hooks/': [
         {
-          text: 'React Hooks',
+          text: 'Vue Hooks',
+          collapsed: false,
           items: [
-            { text: 'useLocalStorage', link: '/hooks/react/use-local-storage' }
+            { text: 'useToggle', link: '/hooks/vue/use-toggle' }
           ]
         },
         {
-          text: 'Vue Hooks',
-          items: []
+          text: 'React Hooks',
+          collapsed: true,
+          items: [
+            { text: 'useLocalStorage', link: '/hooks/react/use-local-storage' }
+          ]
         }
       ],
       '/components/': [
@@ -60,6 +65,7 @@ export default defineConfig({
           text: '基础组件',
           collapsed: false,
           items: [
+            { text: 'UploadPro 上传 (在线预览)', link: '/components/upload-pro' },
             { text: 'Button 按钮 (在线预览)', link: '/components/button' },
             { text: 'StatusBadge 状态徽章', link: '/components/status-badge' }
           ]
