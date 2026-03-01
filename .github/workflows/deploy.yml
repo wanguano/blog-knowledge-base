@@ -24,7 +24,14 @@ jobs:
       # 第三步：安装依赖并打包
       - name: Install & Build
         run: |
-          npm install
+          # npm ci 是专门用于 CI 环境的安装命令，更稳定、更快
+          # 它会严格按照 package-lock.json 安装
+          npm ci
+          
+          # 确保 vitepress 被安装了（可选，用于调试）
+          npm list vitepress || echo "Vitepress not found via list"
+          
+          # 执行构建
           npm run build
         # 注意：Vue3 打包后通常会生成 dist 目录
 

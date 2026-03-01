@@ -22,33 +22,48 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
+              text: '工程化/DevOps',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                { text: 'GitHub Actions 实现博客自动化部署', link: '/tech-lab/devops/github-actions-deploy' }
+              ]
+            },
+            {
+              text: '组件库和HOOKS',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  text: '组件',
+                  collapsible: true,
+                  collapsed: false,
+                  items: [
+                    { text: 'UploadPro 上传 (在线预览)', link: '/components/upload-pro' },
+                    { text: 'Button 按钮 (在线预览)', link: '/components/button' },
+                    { text: 'StatusBadge 状态徽章', link: '/components/status-badge' },
+                    { text: 'NavMenu 导航菜单', link: '/components/nav-menu' }
+                  ]
+                },
+                {
+                  text: 'Hooks',
+                  collapsible: true,
+                  collapsed: false,
+                  items: [
+                    { text: 'useToggle (Vue)', link: '/hooks/vue/use-toggle' },
+                    { text: 'useInteract (Vue)', link: '/hooks/vue/use-interact' },
+                    { text: 'useLocalStorage (React)', link: '/hooks/react/use-local-storage' }
+                  ]
+                }
+              ]
+            },
+            {
               text: '框架与踩坑',
               collapsible: true,
               collapsed: false,
               items: [
                 { text: 'Vite HMR 失效', link: '/posts/技术难点/vite-hmr-failed' },
                 { text: 'React Hydration 错误', link: '/posts/踩坑记录/react-hydration-error' }
-              ]
-            },
-            {
-              text: '组件',
-              collapsible: true,
-              collapsed: false,
-              items: [
-                { text: 'UploadPro 上传 (在线预览)', link: '/components/upload-pro' },
-                { text: 'Button 按钮 (在线预览)', link: '/components/button' },
-                { text: 'StatusBadge 状态徽章', link: '/components/status-badge' },
-                { text: 'NavMenu 导航菜单', link: '/components/nav-menu' }
-              ]
-            },
-            {
-              text: 'Hooks',
-              collapsible: true,
-              collapsed: false,
-              items: [
-                { text: 'useToggle (Vue)', link: '/hooks/vue/use-toggle' },
-                { text: 'useInteract (Vue)', link: '/hooks/vue/use-interact' },
-                { text: 'useLocalStorage (React)', link: '/hooks/react/use-local-storage' }
               ]
             }
           ]
