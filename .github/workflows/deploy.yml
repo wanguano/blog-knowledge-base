@@ -1,0 +1,40 @@
+name: Deploy Blog to Server
+
+on:
+  push:
+    branches:
+      - main  # 监听 main 分支的变动
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # 使用 GitHub 提供的 Linux 环境
+
+    steps:
+      # 第一步：把代码拉下来
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 第二步：配置 Node.js 环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # 2025年了，用 LTS 版本
+          cache: 'npm'       # 开启缓存，加速安装依赖
+
+      # 第三步：安装依赖并打包
+      - name: Install & Build
+        run: |
+          npm install
+          npm run build
+        # 注意：Vue3 打包后通常会生成 dist 目录
+
+      # 第四步：把 dist 目录推送到服务器
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@v5.0.0 # 这是一个成熟的第三方 Action
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          ARGS: "-rltgoDzvO --delete" # rsync 参数，保证同步
+          SOURCE: "dist/"             # 本地构建产物路径
+          REMOTE_HOST: ${{ secrets.SERVER_IP }}
+          REMOTE_USER: ${{ secrets.SERVER_USER }}
+          TARGET: "/www/wwwroot/my-blog/" # 服务器目标路径
