@@ -2,79 +2,109 @@ import { defineConfig } from 'vitepress';
 
 export default defineConfig({
   title: 'Dev Knowledge Base',
-  description: '技术难点、踩坑记录、学习笔记、Hooks 组件库',
+  description: '全栈成长轨迹：技术、副业、效能与认知升级',
   
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '指南', link: '/guide/contribution' },
-      { text: '技术难点', link: '/posts/技术难点/vite-hmr-failed' },
-      { text: '踩坑记录', link: '/posts/踩坑记录/react-hydration-error' },
-      { text: '组件', link: '/components/button' },
-      { text: 'Hooks', link: '/hooks/vue/use-toggle' }
+      { text: '💻 技术实验室', link: '/tech-lab/' },
+      { text: '💰 副业观察室', link: '/side-hustle/' },
+      { text: '🚀 面试通关SOP', link: '/career-path/' },
+      { text: '⚡ 效能黑客', link: '/productivity/' },
+      { text: '🧠 认知升级', link: '/mindset/' }
     ],
     
     sidebar: {
-      '/guide/': [
+      '/tech-lab/': [
         {
-          text: '开始使用',
+          text: '💻 技术实验室',
+          collapsible: true,
+          collapsed: false,
           items: [
-            { text: '贡献指南', link: '/guide/contribution' }
+            {
+              text: '框架与踩坑',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                { text: 'Vite HMR 失效', link: '/posts/技术难点/vite-hmr-failed' },
+                { text: 'React Hydration 错误', link: '/posts/踩坑记录/react-hydration-error' }
+              ]
+            },
+            {
+              text: '组件',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                { text: 'UploadPro 上传 (在线预览)', link: '/components/upload-pro' },
+                { text: 'Button 按钮 (在线预览)', link: '/components/button' },
+                { text: 'StatusBadge 状态徽章', link: '/components/status-badge' },
+                { text: 'NavMenu 导航菜单', link: '/components/nav-menu' }
+              ]
+            },
+            {
+              text: 'Hooks',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                { text: 'useToggle (Vue)', link: '/hooks/vue/use-toggle' },
+                { text: 'useInteract (Vue)', link: '/hooks/vue/use-interact' },
+                { text: 'useLocalStorage (React)', link: '/hooks/react/use-local-storage' }
+              ]
+            }
           ]
         }
       ],
-      '/posts/': [
+      '/side-hustle/': [
         {
-          text: '技术难点',
+          text: '💰 副业观察室',
+          collapsible: true,
           collapsed: false,
           items: [
-            { text: 'Vite HMR 失效', link: '/posts/技术难点/vite-hmr-failed' }
-          ]
-        },
-        {
-          text: '踩坑记录',
-          collapsed: false,
-          items: [
-            { text: 'React Hydration 错误', link: '/posts/踩坑记录/react-hydration-error' }
-          ]
-        },
-        {
-          text: '学习笔记',
-          collapsed: false,
-          items: []
-        }
-      ],
-      '/hooks/': [
-        {
-          text: 'Vue Hooks',
-          collapsed: false,
-          items: [
-            { text: 'useToggle', link: '/hooks/vue/use-toggle' }
-          ]
-        },
-        {
-          text: 'React Hooks',
-          collapsed: true,
-          items: [
-            { text: 'useLocalStorage', link: '/hooks/react/use-local-storage' }
+            { text: '淘宝', link: '/side-hustle/taobao' },
+            { text: 'Web3', link: '/side-hustle/web3' },
+            { text: '商业逻辑', link: '/side-hustle/business-logic' },
+            {
+              text: 'IBKR美股投资',
+              collapsible: true,
+              collapsed: true,
+              items: [
+                { text: 'WISE出金到国内磨损最优解', link: '/side-hustle/ibkr/wise-withdrawal-optimal-solution' }
+              ]
+            }
           ]
         }
       ],
-      '/components/': [
+      '/career-path/': [
         {
-          text: '基础组件',
+          text: '🚀 面试通关SOP',
+          collapsible: true,
           collapsed: false,
           items: [
-            { text: 'UploadPro 上传 (在线预览)', link: '/components/upload-pro' },
-            { text: 'Button 按钮 (在线预览)', link: '/components/button' },
-            { text: 'StatusBadge 状态徽章', link: '/components/status-badge' }
+            { text: '简历', link: '/career-path/resume' },
+            { text: '真题', link: '/career-path/questions' },
+            { text: '复盘', link: '/career-path/review' }
           ]
-        },
+        }
+      ],
+      '/productivity/': [
         {
-          text: '导航组件',
+          text: '⚡ 效能黑客',
+          collapsible: true,
           collapsed: false,
           items: [
-            { text: 'NavMenu 导航菜单', link: '/components/nav-menu' }
+            { text: '工具', link: '/productivity/tools' },
+            { text: '工作流', link: '/productivity/workflow' }
+          ]
+        }
+      ],
+      '/mindset/': [
+        {
+          text: '🧠 认知升级',
+          collapsible: true,
+          collapsed: false,
+          items: [
+            { text: '财报', link: '/mindset/financial-report' },
+            { text: '思考', link: '/mindset/thinking' }
           ]
         }
       ]
@@ -82,11 +112,7 @@ export default defineConfig({
     
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ],
-
-    /* search: {
-      provider: 'local'
-    } */
+    ]
   },
   
   markdown: {

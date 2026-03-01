@@ -2,28 +2,34 @@
 layout: home
 
 hero:
-  name: "Dev Knowledge Base"
-  text: "技术成长，点滴记录"
-  tagline: "记录技术难点、踩坑经验、可复用组件与 Hooks"
+  name: "小风成长之路"
+  text: "点滴记录"
+  tagline: "记录全栈技术、副业探索、效能提升与认知升级"
   actions:
     - theme: brand
-      text: 开始阅读
-      link: /posts/技术难点/vite-hmr-failed
+      text: 💻 技术实验室
+      link: /tech-lab/
     - theme: alt
-      text: 贡献指南
-      link: /guide/contribution
-    - theme: alt
-      text: 查看组件
-      link: /components/button
+      text: 💰 副业观察室
+      link: /side-hustle/
+  image:
+    src: /images/avatar.jpg
+    alt: Dev Knowledge Base Avatar
 
 features:
-  - title: 技术难点
-    details: 深度解析开发过程中的疑难杂症，沉淀核心逻辑。
+  - title: 💻 技术实验室 (Tech Lab)
+    details: AI、框架、源码深度解析，记录真实的开发踩坑与最佳实践。
+    icon: 💻
+  - title: 💰 副业观察室 (Side Hustle)
+    details: 淘宝、Web3、商业逻辑、美股投资等搞钱实操与心得。
+    icon: 💰
+  - title: 🚀 面试通关SOP (Career Path)
+    details: 简历优化、大厂真题解析与面试复盘，求职避坑指南。
     icon: 🚀
-  - title: 踩坑记录
-    details: 记录真实的报错现场与修复方案方案，避免重复施工。
-    icon: 🛡️
-  - title: 代码碎片
-    details: 收集高质量的 Hooks 与跨项目可复用组件。
-    icon: 📦
+  - title: ⚡ 效能黑客 (Productivity)
+    details: 高效工具推荐、自动化工作流打造，把时间花在刀刃上。
+    icon: ⚡
+  - title: 🧠 认知升级 (Mindset)
+    details: 财报分析、思维模型、读书笔记，从底层逻辑看世界。
+    icon: 🧠
 ---

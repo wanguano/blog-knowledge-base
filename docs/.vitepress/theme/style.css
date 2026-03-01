@@ -12,3 +12,16 @@
 .custom-block.tip {
   border-color: var(--vp-c-brand);
 }
+
+/* 让首页右侧的 hero image 变成圆形并加上一点阴影 */
+.VPHero .image-src {
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* 还可以通过 max-width 控制头像大小，比如: max-width: 320px; */
+}
+
+/* Medium Zoom 图片放大插件 z-index，覆盖导航栏 */
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 2147483647 !important;
+}
