@@ -1,9 +1,9 @@
 ---
-title: GitHub Actions 实现博客自动化部署
+
+## title: GitHub Actions 实现博客自动化部署
 description: 记录如何使用 GitHub Actions 自动化部署基于 VitePress 的博客系统到个人服务器
 date: 2026-03-01
 tags: [DevOps, GitHub Actions, CI/CD, 自动化部署]
----
 
 # {{ $frontmatter.title }}
 
@@ -73,7 +73,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v5.0.0 # 这是一个成熟的第三方 Action
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
-          ARGS: "-rltgoDzvO --delete" # rsync 参数，保证同步
+          ARGS: "-rltgoDzvO --delete --exclude='.user.ini'" # rsync 参数，保证同步并跳过 .user.ini
           SOURCE: "docs/.vitepress/dist/"  # 👈 或者是你实际生成的路径
           REMOTE_HOST: ${{ secrets.SERVER_IP }}
           REMOTE_USER: ${{ secrets.SERVER_USER }}
@@ -84,11 +84,11 @@ jobs:
 ## 注意事项与避坑指北
 
 1. **打包路径 `SOURCE`**：
-   如果你使用的是常规 Vue/React 项目，打包产物通常在 `dist/`。而本文是基于 VitePress 构建的，默认产物路径是 `docs/.vitepress/dist/`，配置时一定要注意路径末尾的斜杠 `/`。
-2. **`--delete` 参数**：
-   `ARGS: "-rltgoDzvO --delete"` 这个配置非常重要，它保证了服务器端的文件会与构建产物完全一致，**不在构建产物中的旧文件会被自动删除**，避免服务器空间被旧的静态资源塞满。
+  如果你使用的是常规 Vue/React 项目，打包产物通常在 `dist/`。而本文是基于 VitePress 构建的，默认产物路径是 `docs/.vitepress/dist/`，配置时一定要注意路径末尾的斜杠 `/`。
+2. `**--delete` 参数**：
+  `ARGS: "-rltgoDzvO --delete"` 这个配置非常重要，它保证了服务器端的文件会与构建产物完全一致，**不在构建产物中的旧文件会被自动删除**，避免服务器空间被旧的静态资源塞满。
 3. **免密登录**：
-   如果你之前没配置过服务器的 SSH 免密登录，可以在本地使用 `ssh-keygen` 生成密钥对，把 `id_rsa.pub` 追加到服务器的 `~/.ssh/authorized_keys` 中，然后把 `id_rsa` 的内容复制到 GitHub Secret `SERVER_SSH_KEY` 中。
+  如果你之前没配置过服务器的 SSH 免密登录，可以在本地使用 `ssh-keygen` 生成密钥对，把 `id_rsa.pub` 追加到服务器的 `~/.ssh/authorized_keys` 中，然后把 `id_rsa` 的内容复制到 GitHub Secret `SERVER_SSH_KEY` 中。
 
 ## 最终效果
 
