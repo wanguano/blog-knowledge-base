@@ -106,3 +106,33 @@ tags: [副业, IBKR, 美股, 出金, WISE]
 - **磨损率：** 2.0184%
 
 ![银联 $5000](https://mingcloudpic.oss-cn-beijing.aliyuncs.com/images/202603011624244.png)
+
+
+
+
+## bitget wallet card 出金
+### ✅ 出金 $100
+
+- **手续费：** 1.35 USD
+
+- **磨损率：** 1.35%
+
+![Pasted image 20260303204509](https://mingcloudpic.oss-cn-beijing.aliyuncs.com/images/202603032227495.png)
+
+
+### ✅ 出金 $1000
+
+- **手续费：** 5.48 USD
+
+- **磨损率：** 0.548%
+
+
+![Pasted image 20260303204600](https://mingcloudpic.oss-cn-beijing.aliyuncs.com/images/202603032227496.png)
+
+### ✅ 出金 $2000
+
+- **手续费：** 10.05 USD
+
+- **磨损率：** 0.5025%
+
+![Pasted image 20260303204727](https://mingcloudpic.oss-cn-beijing.aliyuncs.com/images/202603032227497.png)

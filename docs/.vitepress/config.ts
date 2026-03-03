@@ -83,6 +83,7 @@ export default defineConfig({
               collapsible: true,
               collapsed: true,
               items: [
+                { text: '入金IBKR磨损记录', link: '/side-hustle/ibkr/入金IBKR磨损记录' },
                 { text: 'WISE出金到国内磨损最优解', link: '/side-hustle/ibkr/wise-withdrawal-optimal-solution' }
               ]
             }
