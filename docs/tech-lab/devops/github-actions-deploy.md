@@ -57,20 +57,28 @@ jobs:
       # 第三步：安装依赖并打包
       - name: Install & Build
         run: |
-          npm install
-          npm run docs:build # VitePress 默认的打包命令
-        # 注意：VitePress 默认打包输出到 docs/.vitepress/dist
+          # npm ci 是专门用于 CI 环境的安装命令，更稳定、更快
+          # 它会严格按照 package-lock.json安装
+          npm ci
+          
+          # 确保 vitepress 被安装了（可选，用于调试）
+          npm list vitepress || echo "Vitepress not found via list"
+          
+          # 执行构建
+          npm run build
+        # 注意：Vue3 打包后通常会生成 dist 目录
 
-      # 第四步：把打包产物推送到服务器
+      # 第四步：把 dist 目录推送到服务器
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v5.0.0 # 这是一个成熟的第三方 Action
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
-          ARGS: "-rltgoDzvO --delete" # rsync 参数，保证增量同步且删除多余文件
-          SOURCE: "docs/.vitepress/dist/" # 本地构建产物路径
+          ARGS: "-rltgoDzvO --delete" # rsync 参数，保证同步
+          SOURCE: "docs/.vitepress/dist/"  # 👈 或者是你实际生成的路径
           REMOTE_HOST: ${{ secrets.SERVER_IP }}
           REMOTE_USER: ${{ secrets.SERVER_USER }}
-          TARGET: "/www/wwwroot/my-blog/" # 服务器目标站点的物理路径
+          TARGET: "/www/wwwroot/my-blog/" # 服务器目标路径
+          REMOTE_PORT: "9527"  # 👈 加上这一行！注意是字符串格式
 ```
 
 ## 注意事项与避坑指北
