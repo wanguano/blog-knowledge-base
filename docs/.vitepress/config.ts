@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress';
 
 export default defineConfig({
-  title: 'Dev Knowledge Base',
-  description: '全栈成长轨迹：技术、副业、效能与认知升级',
+  title: '风不识途',
+  description: '成长轨迹：技术、副业、效能与认知升级，记录点滴成长',
   
   themeConfig: {
     nav: [
